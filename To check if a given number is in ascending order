@@ -1,0 +1,11 @@
+def is_sorted(L):
+  
+  sorted = True
+
+  for i in range(len(L)):
+
+    if L[i] > L[i+1]:
+      sorted = False
+
+
+    return sorted  

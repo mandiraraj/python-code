@@ -1,0 +1,6 @@
+def Reverse(list):
+    list.reverse()
+    return list
+list = list(map(int,input().split()))  
+print(Reverse(list))
+    

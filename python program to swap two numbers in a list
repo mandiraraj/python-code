@@ -1,0 +1,15 @@
+def swapPositions(list , pos1 , pos2):
+    
+    
+    first_element = list.pop(pos1)
+    second_element = list.pop(pos2 - 1)
+    
+    list.insert(pos1 , second_element)
+    list.insert(pos2 , first_element)
+    
+    return list
+    
+n = list(map(int,input().split()))
+pos1 = int(input())
+pos2 = int(input())
+print(swapPositions(n , pos1, pos2))

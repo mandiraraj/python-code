@@ -1,0 +1,7 @@
+def reverseList(A):
+    print(A[::-1])
+    
+A = list(map(int,input().split()))
+print(A)
+print("Reversed list is")
+reverseList(A)

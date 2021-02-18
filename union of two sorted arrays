@@ -1,0 +1,40 @@
+def UnionArray(arr1 , arr2):
+    
+    m = arr1[-1]
+    n = arr2[-1]
+    ans = 0
+    
+    
+    if m > n:
+        ans = m 
+    else:
+        ans = n 
+        
+        
+    newtable = [0] * (ans +1)
+    
+    print(arr1[0], end = " ")
+    
+    newtable[arr1[0]] += 1 
+    
+    for i in range(1, len(arr1)):
+        
+        if arr1[i] != arr1[i-1]:
+            
+            print(arr1[i], end = " ")
+            newtable[arr1[i]] += 1
+            
+    for j in range(0, len(arr2)):
+        
+        if newtable[arr2[j]] == 0:
+            
+            print(arr2[j],end = " ")
+            newtable[arr2[j]] += 1 
+            
+
+if __name__ == "__main__":
+    
+    arr1 = list(map(int,input().split()))
+    arr2 = list(map(int,input().split()))
+    
+    UnionArray(arr1 , arr2)

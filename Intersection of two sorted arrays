@@ -1,0 +1,34 @@
+def IntersectionArray(a,b,n,m):
+    
+    Intersection = []
+    i = j = 0
+    
+    while i < n and j < m:
+        if a[i] == b[j]:
+            
+            if len(Intersection) > 0 and Intersection[-1] == a[i]:
+                i+= 1 
+                j+= 1 
+            else:
+                Intersection.append(a[i])
+                i+= 1 
+                j+= 1 
+        
+        elif a[i] < b[j]:
+            i+= 1 
+        else:
+            j+= 1 
+    
+    if not len (Intersection):
+        return [-1]
+    return Intersection
+    
+    
+if __name__ =="__main__":
+    
+    arr1 = list(map(int,input().split()))
+    arr2 = list(map(int,input().split()))
+    
+    l = IntersectionArray(arr1 , arr2 , len(arr1) , len(arr2))
+    print(*l)
+    

@@ -1,0 +1,11 @@
+def kthSmallest(arr, n, k):
+    arr.sort()
+    
+    return arr[k-1]
+    
+if __name__ =='__main__':
+    arr = list(map(int,input().split()))
+    n = len(arr)
+    k = int(input())
+    print("k'th smallest element is:", kthSmallest(arr, n, k))
+    
